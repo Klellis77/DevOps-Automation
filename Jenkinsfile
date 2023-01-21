@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    tools{
-        maven 'maven_3_5_0'
+    tools {
+        maven 'Maven 3.6.3'
     }
     stages{
         stage('Build Maven'){
@@ -20,8 +20,8 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u klellis77 -p ${dockerhubpwd}'
+                   withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'LetsGoforit75}')]) {
+                   sh 'docker login -u klellis77 -p ${LetsGoforit75}'
 
 }
                    sh 'docker push klellis77/devops-integration'
